@@ -1,4 +1,4 @@
-# Clip Embeddings for Role Prediction in the IMSitu Dataset
+# ClipSitu: Effectively Leveraging CLIP for Conditional Predictions in Situation Recognition
 This project contains code for training and evaluating several models for predicting roles based on Clip embeddings of images and verbs, using the IMSitu dataset.
 
 ## Dataset
@@ -16,7 +16,7 @@ Transformer: A transformer-based model that uses self-attention to process the v
 MLP (Multi-Layer Perceptron): A simple feed-forward neural network that takes a fixed-length concatenation of the image, verb, and role embeddings as input.
 
 ## Training and Evaluation
-We train each model on the training split of the IMSitu dataset, and evaluate it on the validation split. We report accuracy and F1 score for role prediction.
+We train each model on the training split of the IMSitu dataset and evaluate it on the validation split. We report accuracy and F1 score for role prediction.
 
 We provide scripts for training and evaluating each model, along with hyperparameter configurations.
 
