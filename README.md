@@ -2,21 +2,19 @@
 This project contains code for training and evaluating several models for predicting roles based on Clip embeddings of images and verbs, using the IMSitu dataset.
 
 ## Dataset
-The IMSitu dataset contains images with corresponding verbs and roles. Each verb can have up to six roles associated with it. The goal is to predict the roles given the image and the verb.
-
-We generate Clip embeddings for each image and verb, and also for each role. For each image-verb pair, we concatenate the image embedding, verb embedding, and up to six role embeddings (if they exist) to obtain a sequence representation. We then feed this sequence through various models to predict the roles.
+We perform our experiments on imSitu dataset and the augmented imSitu dataset called SWiG for situation recognition and localization, respectively termed as grounded situation recognition. The dataset has a total of 125k images with 75k train, 25k validation, and 25k test images. The metrics used for semantic role labeling are value and value-all which predict the accuracy of noun. 
 
 ## Models
-We implement three different models for role prediction:
+We implement three different models.
 
-GGNN (Graph-based Global Reasoning Neural Network): A graph neural network that uses the IMSitu graph structure to perform global reasoning over the roles.
+ClipSitu XTF: Cross-Attention Transformer
 
-Transformer: A transformer-based model that uses self-attention to process the variable-length input sequence.
+ClipSitu TF: ClipSitu Transformer
 
-MLP (Multi-Layer Perceptron): A simple feed-forward neural network that takes a fixed-length concatenation of the image, verb, and role embeddings as input.
+ClipSitu MLP
 
 ## Training and Evaluation
-We train each model on the training split of the IMSitu dataset and evaluate it on the validation split. We report accuracy and F1 score for role prediction.
+We train each model on the training split of the IMSitu dataset and evaluate it on the validation split. 
 
 We provide scripts for training and evaluating each model, along with hyperparameter configurations.
 
