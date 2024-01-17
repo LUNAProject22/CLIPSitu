@@ -13,6 +13,10 @@ ClipSitu TF: ClipSitu Transformer
 
 ClipSitu MLP
 
+## Code
+
+Please download the code here. https://drive.google.com/drive/folders/1mUqBRu6-ncGz65LHAaEeGP6tQox-tyGI?usp=sharing
+
 ## Training and Evaluation
 We train each model on the training split of the IMSitu dataset and evaluate it on the validation split. 
 
