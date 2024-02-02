@@ -1,0 +1,30 @@
+command:
+  - ${env}
+  - ${interpreter}
+  - ${program}
+  - --gpuid
+  - "2"
+  - --num_workers
+  - "3"
+  - ${args}
+method: grid
+metric:
+  goal: maximize
+  name: value-all*
+parameters:
+  hidden_size:
+    value: 16384
+  model:
+    value: mlp
+  num_layers:
+    value: 3
+  text_embeds:
+    values: 
+      - clip
+      - bert
+      - glove 
+      - align
+  img_emb_base:
+    value: vit-l14-336
+
+program: main.py

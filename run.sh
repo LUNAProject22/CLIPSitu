@@ -1,0 +1,2 @@
+python main.py --gpuid 0 --model mlp --num_layers 3 --hidden_size 16384 --batch_size 64 --img_emb_base vit-b16
+python main.py --gpuid 0 --model mlp --num_layers 3 --hidden_size 16384 --batch_size 64 --img_emb_base vit-l14

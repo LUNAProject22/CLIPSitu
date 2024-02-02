@@ -1,0 +1,47 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            //"args": ["--gpuid", "2", "--num_workers", "3","--model","transformer","--load_model", "train_full_transformer_lr0.001_bs64_nh8_nl4_lmda0_XEonly.model", "--verbeval",]
+            // "args": ["--gpuid","2","--num_workers","0","--model", "xtf", "--num_layers", "6", "--num_heads", "1", "--batch_size", "64","--text_embeds", "bert"] 
+            //"args":["--gpuid","2","--num_workers","3","--model","mlp","--num_layers","3","--hidden_size","16384","--nolog","--text_embeds", "align","--img_emb_base","align"]
+            //"--load_model", "trained_models/train_full_xtf_lr0.001_bs64_nh1_nl6_lmda1_XEonly.model", "--train_topkverb" ]
+            //"args": ["--gpuid","2","--num_workers","3","--model","mlp","--learning_rate","0.0001","--train_topkverb"]
+            //"args": ["--gpuid","2", "--model","mlp", "--hidden_size", "16384", "--num_workers","3","--train_topkverb","--verb_model","verb_mlp"]
+            //"args": ["--gpuid","2", "--model","xtf", "--num_layers", "6", "--num_heads", "1", "--load_model","xtf_lr0.001_bs64_nh1_nl6_XEonly_vit-b32","--verb_model","wiseft","--save_verb_and_noun_predictions"]
+            //"args": ["--model","verb_ptf"]
+            
+            //"args": ["--gpuid","0","--num_workers","3","--model","xtf", "--num_heads", "1", "--num_layers", "6", "--img_emb_base", "vit-l14-336",
+            //"--img_emb_base_verb", "vit-b16", "--load_model", "xtf_lr0.0001_bs64_nh1_nl6_XEonly_vit-l14-336", "--verb_model", "verb_mlp", "--num_verb_layers", "1", "--verbeval" ]
+       //     "args": ["--num_workers","3","--model", "verb_mlp", "--num_verb_layers", "1", "--img_emb_base_verb", "align","--proj_dim","640"]
+            //"--load_model", "verb_mlp_lr0.001_bs64_nl1_vit-b16", "--save_scores", "True"]
+            //"args": ["--gpuid","0", "--model","xtf", "--num_layers", "6", "--num_heads", "1", "--load_model","xtf_lr0.001_bs64_nh1_nl6_XEonly_vit-b32","--verb_model","verb_mlp", "--num_verb_layers", "3", "--verbeval"]
+            // "args": ["--model","verb_ptf"]
+            // "mlp_clf_nl2_hs8192_lr0.0001_bs64_lmda1_XEonly"
+            //"args": ["--gpuid","2","--num_workers","3","--model","mlp","--text_embeds","bert"]
+            //"args": ["--gpuid","2","--num_workers","3","--evaluate","--role_model_type","mlp","--role_model","mlp_clf_nl2_hs8192_lr0.0001_bs64_lmda1_XEonly"]
+            //"args": ["--gpuid","2","--num_workers","3","--model","xtf","--num_heads","1","--num_layers","6","--img_emb_base","vit-b32","--load_model","xtf_vit-b32_nh1_nl6_XEonly","--evaluate","--get_model_complexity"]
+            "args": ["--gpuid","2","--num_workers","3","--model","xtf","--num_heads","1","--num_layers","6","--num_verb_layers","1","--img_emb_base","align", "--text_embeds","align","--proj_dim","640","--load_model","xtf_img_align_text_align_nh1_nl6_XEonly_03","--verbeval"]
+            //"args": ["--gpuid","2","--num_workers","3","--model","mlp","--hidden_size","16384","--num_layers","3","--text_embeds","align","--img_emb_base","align", "--load_model","mlp_align_hs16384_nl3_XEonly_01","--verbeval", "--verb_model", "verb_mlp"] //,"--debug","True"
+            //"args": ["--gpuid","0","--num_workers","3", "--model","xtf", "--num_layers", "6", "--num_heads", "1", "--load_model", "xtf_lr0.001_bs64_nh1_nl6_XEonly_vit-l14-336", "--img_emb_base", "vit-l14-336", "--img_emb_base", "vit-b16", "--verb_model", "verb_mlp", "--num_verb_layers", "1", "--verbeval"]
+            //"args": ["--gpuid","2","--num_workers","3","--model","xtf", "--num_heads", "1", "--num_layers", "6","--text_embeds","align","--img_emb_base","align","--proj_dim", "640"]
+           
+            //"args": ["--gpuid","0","--num_workers","3","--model","xtf", "--num_heads", "1", "--num_layers", "6", "--img_emb_base", "vit-b32", "--bb", "False", "--sum", "True"]  
+            //"args": ["--gpuid","0","--num_workers","0","--model","xtf", "--load_model","xtf_lr0.001_bs64_nh1_nl6_XEonly_vit-b32","--verbeval", "--verb_model", "verb_mlp"] //,"--debug","True"
+            //"args": ["--gpuid","0","--num_workers","3", "--model","xtf", "--num_layers", "6", "--num_heads", "1", "--load_model", "xtf_lr0.001_bs64_nh1_nl6_XEonly_vit-l14-336", "--img_emb_base", "vit-b32", 
+            //"--img_emb_base", "vit-b32", "--img_emb_base_verb", "vit-b32", "--verb_model", "verb_mlp", "--num_verb_layers", "1", "--bb", "True", "--verbeval_bb"]
+            //"args": ["--gpuid","2","--num_workers","3","--model","xtf_bb", "--num_heads", "1", "--num_layers", "6", "--img_emb_base", "vit-b32", "--bb", "True"]
+            //"args": ["--model", "bb_mlp","--img_emb_base_bb","vit-b32"]
+        }
+    ]
+}
